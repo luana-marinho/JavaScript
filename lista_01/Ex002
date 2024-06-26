@@ -1,0 +1,19 @@
+const leia = require('readline-sync')
+
+let nomeAluno;
+let n1;
+let n2;
+let n3;
+let n4;
+let media;
+
+nomeAluno = leia.question('\nDigite o nome do aluno: ');
+n1 = leia.questionInt('\nDigite a primeira nota: ', {limitMessage: 'Digite um número do tipo inteiro'});
+n2 = leia.questionInt('\nDigite a segunda nota: ', {limitMessage: 'Digite um número do tipo inteiro'});
+n3 = leia.questionInt('\nDigite a terceira nota: ', {limitMessage: 'Digite um número do tipo inteiro'});
+n4 = leia.questionInt('\nDigite a quarta nota: ', {limitMessage: 'Digite um número do tipo inteiro'});
+
+media = (n1 + n2 + n3 + n4) / 4;
+console.clear();
+console.log('A média do aluno ' + nomeAluno + ' é ' + media);
+

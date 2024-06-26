@@ -1,0 +1,18 @@
+const leia = require('readline-sync')
+
+let nomeFuncionario
+let salarioBruto
+let adicionalNoturno
+let horasExtras
+let descontos
+let salarioLiquido
+
+nomeFuncionario = leia.question('\nDigite o nome do funcionario: ');
+salarioBruto = leia.questionFloat('\nInforme o valor do salario bruto do funcionario: ', {limitMessage: 'Digite um número do tipo Float'});
+adicionalNoturno = leia.questionFloat('\nInforme o valor do adicional noturno: ', {limitMessage: 'Digite um número do tipo Float'});
+horasExtras = leia.questionFloat('\nInforme o valor das horas extras: ', {limitMessage: 'Digite um número do tipo Float'});
+descontos = leia.questionFloat('\nInforme o valor do desconto: ', {limitMessage: 'Digite um número do tipo Float'});
+
+salarioLiquido = (salarioBruto + adicionalNoturno + (horasExtras * 5) ) - descontos;
+console.clear();
+console.log('O salario liquido de ' + nomeFuncionario + ' é ' + salarioLiquido);
