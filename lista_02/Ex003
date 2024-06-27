@@ -1,0 +1,45 @@
+const leia = require('readline-sync')
+
+let quantidade;
+let codigo;
+let valorTotal;
+
+console.log("\n -------Produtos-------: ");
+console.log("\n   1 -- Cachorro Quente ");
+console.log("\n     2 -- X-Salada ");
+console.log("\n      3 -- X-Bacon ");
+console.log("\n      4 -- Bauru");
+console.log("\n   5 -- Refrigerante ");
+console.log("\n 6 -- Suco de laranja ")
+
+codigo = leia.questionInt("\nDigite o codigo do produto: ")
+quantidade = leia.questionInt("\nDigite a quantidade deste produto: ")
+
+console.clear()
+
+switch (codigo) {
+    case 1:
+        valorTotal = quantidade * 10
+        console.log("\nProduto: Cachorro Quente." + "\nValor total: " + valorTotal);
+        break;
+    case 2:
+        valorTotal = quantidade * 15
+        console.log("\nProduto: X-Salada ." + "\nValor total: " + valorTotal);
+        break;
+    case 3:
+        valorTotal = quantidade * 18
+        console.log("\nProduto: X-Bacon ." + "\nValor total: " + valorTotal);
+        break;
+    case 4:
+        valorTotal = quantidade * 12
+        console.log("\nProduto: Bauru." + "\nValor total: " + valorTotal);
+        break;
+    case 5:
+        valorTotal = quantidade * 8
+        console.log("\nProduto: Refrigerante." + "\nValor total: " + valorTotal);
+        break;
+    case 6:
+        valorTotal = quantidade * 13
+        console.log("\nProduto: Suco de laranja." + "\nValor total: " + valorTotal);
+        break;
+}
